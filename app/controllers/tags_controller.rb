@@ -1,4 +1,4 @@
-TagsController < ApplicationController
+class TagsController < ApplicationController
 
 
 
