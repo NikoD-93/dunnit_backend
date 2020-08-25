@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all 
 Note.destroy_all
+NoteTag.destroy_all
 
 
 
@@ -40,10 +41,12 @@ notes_content = ["He looked down into her brown eyes
 note_titles  = ["Seven Spanish Angels", "Urgent"]
 
 
-Note.create(title: note_titles[0], content: notes_content[0], user_id: User.all.ids.sample)
-Note.create(title: note_titles[1], content: notes_content[1], user_id: User.all.ids.sample)
+note_one = Note.create(title: note_titles[0], content: notes_content[0], user_id: User.all.ids.sample)
+# Note.create(title: note_titles[1], content: notes_content[1], user_id: User.all.ids.sample)
 
-Tag.create(name: "Songs")
-Tag.create(name: "JS")
+ tag_one = Tag.create(name: "Songs")
+tag_two = Tag.create(name: "JS")
 Tag.create(name: "Unneccessary Note")
 Tag.create(name: "#Organized")
+NoteTag.create(tag: tag_one, note: note_one )
+NoteTag.create(tag: tag_two, note: note_one)

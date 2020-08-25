@@ -1,4 +1,4 @@
-NoteTagsController < ApplicationController
+class NoteTagsController < ApplicationController
 
 
 def create 
