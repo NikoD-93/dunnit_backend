@@ -25,7 +25,7 @@ end
 private
 
 def note_params
-    params.require(:note).permit(:title, :content, :user_id)
+    params.require(:note).permit(:title, :content, :user_id, :created_at)
 end
 
 
