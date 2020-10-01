@@ -3,5 +3,5 @@ class NoteSerializer < ActiveModel::Serializer
   # has_many :note_tags
   has_many :tags
   
-  # belongs_to :user
+  belongs_to :user
 end
