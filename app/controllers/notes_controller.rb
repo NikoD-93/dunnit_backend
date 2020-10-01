@@ -7,6 +7,9 @@ end
 
 
 def update
+    note = Note.find(params[:id])
+    note.update(note_params)
+    render json: note
 end 
 
 def destroy
